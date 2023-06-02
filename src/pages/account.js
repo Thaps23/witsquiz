@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { upload, UploadD } from "../config/firebase";
+import { auth1, upload, UploadD } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../config/firebase";
 import { useNavigate } from "react-router-dom";
@@ -17,6 +17,7 @@ export const Account = () => {
     const [photoURL, setPhotoURL] = useState("https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png");
     const navigate = useNavigate();
 
+    console.log(currentUser);
 
     const handleChange = (e) => {
         if (e.target.files[0]) {
@@ -63,7 +64,7 @@ export const Account = () => {
         <h1> </h1>
         <div>
           <input type="text" placeholder="Enter display name" onChange={handle_Change } /> <h1> </h1>
-          <button disabled={loading || !displayName} className="first" onClick={handle_Click}>Upload</button>
+          <button disabled={loading || !displayName} className="first" onClick={handle_Click}>Update</button>
         </div> 
         {displayName} 
     </div>

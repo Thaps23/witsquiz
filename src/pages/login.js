@@ -90,7 +90,7 @@ const logInWithGoogle = async () => {
             <span style={{fontWeight: 'italic',color: 'red',fontSize: "0.675em"}}>{errorMessage}</span>
             </p>
             </p>
-            <button className="first" onClick={login}>Log In</button>
+            <button className="first" onClick={login}>Login</button>
             <p onClick={forgotPassword}>Forgot password?</p>
         </div>
         <div>

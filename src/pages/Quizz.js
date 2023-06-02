@@ -8,7 +8,6 @@ import { uid } from "uid";
 import { db } from "../config/firebase";
 import { TittleValue, setValueTitle, Home} from './home';
 
-
 import {auth} from "../config/firebase"
 import 'firebase/auth';
 
